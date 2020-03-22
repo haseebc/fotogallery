@@ -67,3 +67,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added by HC 22/02/2020
 gem 'simple_form'
+gem 'dotenv-rails', groups: [:development, :test]
