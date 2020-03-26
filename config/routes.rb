@@ -9,3 +9,4 @@ Rails.application.routes.draw do
 
   root 'articles#index'
 end
+# this routing file needs more work 26/03/2020
