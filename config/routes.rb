@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-  root to: 'articles#index'
-  resources :articles, except: :index
+  resources :articles do
+    resources :comments
+  end
+
+  get 'articles/index'
+
+  resources :articles
+
+  root 'articles#index'
 end
