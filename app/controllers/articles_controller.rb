@@ -45,6 +45,15 @@ class ArticlesController < ApplicationController
     redirect_to articles_url, notice: 'Article was successfully destroyed.'
   end
 
+  # HC added 20/03/2020
+  def remove
+    @article = Article.find(params[:article_id])
+    @photo = @article.photos.find(params[:photo_id])
+    @photo.purge
+
+    redirect_to article_path(@article), notice: "Upload was successfully removed."
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
